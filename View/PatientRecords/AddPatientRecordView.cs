@@ -52,7 +52,7 @@ namespace XBYNUM_C969_Application_Development
                         patient.country = CountryAddCustomerTextBox.Text.Trim();
                         patient.phone = PhoneNumberAddCustomerTextBox.Text.Trim();
 
-                        patientController.addNewPatient(patient);
+                        patientController.addPatient(patient);
 
                         this.Hide();
                         var PatientRecords = new PatientRecordsView();

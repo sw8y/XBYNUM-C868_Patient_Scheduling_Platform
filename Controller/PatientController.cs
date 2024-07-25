@@ -42,7 +42,7 @@ namespace XBYNUM_C969_Application_Development.Controller
                 connection.Close();
             }
         }
-        public void addNewPatient(Patient patient)
+        public void addPatient(Patient patient)
         {
             User user = new User();
             //patient.setLogDataAdds(UserController.username);
