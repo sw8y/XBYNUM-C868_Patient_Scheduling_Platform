@@ -18,25 +18,25 @@ namespace XBYNUM_C969_Application_Development
         public UpdatePatientRecordView()
         {
             InitializeComponent();
-            customerIdTextBox.Text = patientId;
+            patientIdTextBox.Text = patientId;
             loadPatientData(patientId);
         }
 
-        public void loadPatientData(string customerId)
+        public void loadPatientData(string patientId)
         {
             PatientController controller = new PatientController();
-            controller.patientId = Int32.Parse(customerId);
+            controller.patientId = Int32.Parse(patientId);
             List<string> data = PatientController.GetPatientDataToUpdate(controller.patientId);
 
-            customerIdTextBox.Text = patientId;
-            FirstNameUpdateCustomerTextBox.Text = data[0].Split(' ')[0];
-            LastNameUpdateCustomerTextBox.Text = data[0].Split(' ')[1];
-            StreetAddressUpdateCustomerTextBox.Text = data[1];
-            StreetAddress2UpdateCustomerTextBox.Text = data[2];
-            CityUpdateCustomerTextBox.Text = data[3];
-            ZipcodeUpdateCustomerTextBox.Text = data[5];
-            CountryUpdateCustomerTextBox.Text = data[4];
-            PhoneNumberUpdateCustomerTextBox.Text = data[6];
+            patientIdTextBox.Text = patientId;
+            FirstNameUpdatePatientTextBox.Text = data[0].Split(' ')[0];
+            LastNameUpdatePatientTextBox.Text = data[0].Split(' ')[1];
+            StreetAddressUpdatePatientTextBox.Text = data[1];
+            StreetAddress2UpdatePatientTextBox.Text = data[2];
+            CityUpdatePatientTextBox.Text = data[3];
+            ZipcodeUpdatePatientTextBox.Text = data[5];
+            CountryUpdatePatientTextBox.Text = data[4];
+            PhoneNumberUpdatePatientTextBox.Text = data[6];
         }
         private void GoBackUpdatePatientButton_Click(object sender, EventArgs e)
         {
@@ -51,32 +51,32 @@ namespace XBYNUM_C969_Application_Development
             Patient patient = new Patient();
 
             string sPattern = "^\\d{3}-\\d{3}-\\d{4}$";
-            if (String.IsNullOrEmpty(FirstNameUpdateCustomerTextBox.Text) ||
-                (String.IsNullOrEmpty(LastNameUpdateCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(StreetAddressUpdateCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(CityUpdateCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(ZipcodeUpdateCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(CountryUpdateCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(PhoneNumberUpdateCustomerTextBox.Text)))
+            if (String.IsNullOrEmpty(FirstNameUpdatePatientTextBox.Text) ||
+                (String.IsNullOrEmpty(LastNameUpdatePatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(StreetAddressUpdatePatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(CityUpdatePatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(ZipcodeUpdatePatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(CountryUpdatePatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(PhoneNumberUpdatePatientTextBox.Text)))
             {
                 MessageBox.Show("Fields cannot be empty! Please add values.");
             }
             else
             {
-                if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberUpdateCustomerTextBox.Text.Trim(), sPattern))
+                if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberUpdatePatientTextBox.Text.Trim(), sPattern))
                 {
-                    string name = FirstNameUpdateCustomerTextBox.Text.Trim() + " " + LastNameUpdateCustomerTextBox.Text.Trim();
+                    string name = FirstNameUpdatePatientTextBox.Text.Trim() + " " + LastNameUpdatePatientTextBox.Text.Trim();
                     if (patientController.validateUniquePatient(name) != false) 
                     {
                         patient.active = 1;
-                        patient.patientId = Int32.Parse(customerIdTextBox.Text);
-                        patient.patientName = FirstNameUpdateCustomerTextBox.Text.Trim() + " " + LastNameUpdateCustomerTextBox.Text.Trim();
-                        patient.address = StreetAddressUpdateCustomerTextBox.Text.Trim();
-                        patient.address2 = StreetAddress2UpdateCustomerTextBox.Text.Trim();
-                        patient.city = CityUpdateCustomerTextBox.Text.Trim();
-                        patient.postalCode = ZipcodeUpdateCustomerTextBox.Text.Trim();
-                        patient.country = CountryUpdateCustomerTextBox.Text.Trim();
-                        patient.phone = PhoneNumberUpdateCustomerTextBox.Text.Trim();
+                        patient.patientId = Int32.Parse(patientIdTextBox.Text);
+                        patient.patientName = FirstNameUpdatePatientTextBox.Text.Trim() + " " + LastNameUpdatePatientTextBox.Text.Trim();
+                        patient.address = StreetAddressUpdatePatientTextBox.Text.Trim();
+                        patient.address2 = StreetAddress2UpdatePatientTextBox.Text.Trim();
+                        patient.city = CityUpdatePatientTextBox.Text.Trim();
+                        patient.postalCode = ZipcodeUpdatePatientTextBox.Text.Trim();
+                        patient.country = CountryUpdatePatientTextBox.Text.Trim();
+                        patient.phone = PhoneNumberUpdatePatientTextBox.Text.Trim();
 
                         patientController.editExistingPatient(patient);
 

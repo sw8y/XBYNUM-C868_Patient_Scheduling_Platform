@@ -26,31 +26,31 @@ namespace XBYNUM_C969_Application_Development
             Patient patient = new Patient();
 
             string sPattern = "^\\d{3}-\\d{3}-\\d{4}$";
-            if (String.IsNullOrEmpty(FirstNameAddCustomerTextBox.Text) ||
-                (String.IsNullOrEmpty(LastNameAddCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(StreetAddressAddCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(CityAddCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(ZipcodeAddCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(CountryAddCustomerTextBox.Text)) ||
-                (String.IsNullOrEmpty(PhoneNumberAddCustomerTextBox.Text)))
+            if (String.IsNullOrEmpty(FirstNameAddPatientTextBox.Text) ||
+                (String.IsNullOrEmpty(LastNameAddPatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(StreetAddressAddPatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(CityAddPatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(ZipcodeAddPatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(CountryAddPatientTextBox.Text)) ||
+                (String.IsNullOrEmpty(PhoneNumberAddPatientTextBox.Text)))
             {
                 MessageBox.Show("Fields cannot be empty! Please add values.");
             }
             else 
             {
-                if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberAddCustomerTextBox.Text.Trim(), sPattern))
+                if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberAddPatientTextBox.Text.Trim(), sPattern))
                 {
-                    string name = FirstNameAddCustomerTextBox.Text.Trim() + " " + LastNameAddCustomerTextBox.Text.Trim();
+                    string name = FirstNameAddPatientTextBox.Text.Trim() + " " + LastNameAddPatientTextBox.Text.Trim();
                     if (patientController.validateUniquePatient(name) != false) 
                     {
                         patient.active = 1;
-                        patient.patientName = FirstNameAddCustomerTextBox.Text.Trim() + " " + LastNameAddCustomerTextBox.Text.Trim();
-                        patient.address = StreetAddressAddCustomerTextBox.Text.Trim();
-                        patient.address2 = StreetAddress2AddCustomerTextBox.Text.Trim();
-                        patient.city = CityAddCustomerTextBox.Text.Trim();
-                        patient.postalCode = ZipcodeAddCustomerTextBox.Text.Trim();
-                        patient.country = CountryAddCustomerTextBox.Text.Trim();
-                        patient.phone = PhoneNumberAddCustomerTextBox.Text.Trim();
+                        patient.patientName = FirstNameAddPatientTextBox.Text.Trim() + " " + LastNameAddPatientTextBox.Text.Trim();
+                        patient.address = StreetAddressAddPatientTextBox.Text.Trim();
+                        patient.address2 = StreetAddress2AddPatientTextBox.Text.Trim();
+                        patient.city = CityAddPatientTextBox.Text.Trim();
+                        patient.postalCode = ZipcodeAddPatientTextBox.Text.Trim();
+                        patient.country = CountryAddPatientTextBox.Text.Trim();
+                        patient.phone = PhoneNumberAddPatientTextBox.Text.Trim();
 
                         patientController.addPatient(patient);
 

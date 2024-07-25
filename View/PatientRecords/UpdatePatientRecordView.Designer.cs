@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.PhoneNumberUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.PhoneNumberUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.ZipCodeUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.ZipcodeUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.ZipcodeUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.StateUpdateCustomerLabel = new System.Windows.Forms.Label();
             this.CityUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.CityUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.CityUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.StreetAddressUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.StreetAddressUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.StreetAddressUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.LastNameUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.LastNameUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.LastNameUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.FirstNameUpdateCustomerLabel = new System.Windows.Forms.Label();
-            this.FirstNameUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.FirstNameUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.GoBackUpdateCustomerButton = new System.Windows.Forms.Button();
             this.ConfirmUpdateCustomerButton = new System.Windows.Forms.Button();
             this.StreetAddress2UpdateLabel = new System.Windows.Forms.Label();
-            this.StreetAddress2UpdateCustomerTextBox = new System.Windows.Forms.TextBox();
-            this.CountryUpdateCustomerTextBox = new System.Windows.Forms.TextBox();
+            this.StreetAddress2UpdatePatientTextBox = new System.Windows.Forms.TextBox();
+            this.CountryUpdatePatientTextBox = new System.Windows.Forms.TextBox();
             this.CountryUpdateCustomerRecordLabel = new System.Windows.Forms.Label();
             this.IDCustomer = new System.Windows.Forms.Label();
-            this.customerIdTextBox = new System.Windows.Forms.TextBox();
+            this.patientIdTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // PhoneNumberUpdateCustomerLabel
@@ -60,12 +60,12 @@
             this.PhoneNumberUpdateCustomerLabel.TabIndex = 29;
             this.PhoneNumberUpdateCustomerLabel.Text = "Phone Number:";
             // 
-            // PhoneNumberUpdateCustomerTextBox
+            // PhoneNumberUpdatePatientTextBox
             // 
-            this.PhoneNumberUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 331);
-            this.PhoneNumberUpdateCustomerTextBox.Name = "PhoneNumberUpdateCustomerTextBox";
-            this.PhoneNumberUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.PhoneNumberUpdateCustomerTextBox.TabIndex = 28;
+            this.PhoneNumberUpdatePatientTextBox.Location = new System.Drawing.Point(351, 331);
+            this.PhoneNumberUpdatePatientTextBox.Name = "PhoneNumberUpdatePatientTextBox";
+            this.PhoneNumberUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.PhoneNumberUpdatePatientTextBox.TabIndex = 28;
             // 
             // ZipCodeUpdateCustomerLabel
             // 
@@ -76,12 +76,12 @@
             this.ZipCodeUpdateCustomerLabel.TabIndex = 27;
             this.ZipCodeUpdateCustomerLabel.Text = "Zip Code:";
             // 
-            // ZipcodeUpdateCustomerTextBox
+            // ZipcodeUpdatePatientTextBox
             // 
-            this.ZipcodeUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 279);
-            this.ZipcodeUpdateCustomerTextBox.Name = "ZipcodeUpdateCustomerTextBox";
-            this.ZipcodeUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.ZipcodeUpdateCustomerTextBox.TabIndex = 26;
+            this.ZipcodeUpdatePatientTextBox.Location = new System.Drawing.Point(351, 279);
+            this.ZipcodeUpdatePatientTextBox.Name = "ZipcodeUpdatePatientTextBox";
+            this.ZipcodeUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.ZipcodeUpdatePatientTextBox.TabIndex = 26;
             // 
             // StateUpdateCustomerLabel
             // 
@@ -100,12 +100,12 @@
             this.CityUpdateCustomerLabel.TabIndex = 23;
             this.CityUpdateCustomerLabel.Text = "City:";
             // 
-            // CityUpdateCustomerTextBox
+            // CityUpdatePatientTextBox
             // 
-            this.CityUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 250);
-            this.CityUpdateCustomerTextBox.Name = "CityUpdateCustomerTextBox";
-            this.CityUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.CityUpdateCustomerTextBox.TabIndex = 22;
+            this.CityUpdatePatientTextBox.Location = new System.Drawing.Point(351, 250);
+            this.CityUpdatePatientTextBox.Name = "CityUpdatePatientTextBox";
+            this.CityUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.CityUpdatePatientTextBox.TabIndex = 22;
             // 
             // StreetAddressUpdateCustomerLabel
             // 
@@ -116,12 +116,12 @@
             this.StreetAddressUpdateCustomerLabel.TabIndex = 21;
             this.StreetAddressUpdateCustomerLabel.Text = "Street Address:";
             // 
-            // StreetAddressUpdateCustomerTextBox
+            // StreetAddressUpdatePatientTextBox
             // 
-            this.StreetAddressUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 194);
-            this.StreetAddressUpdateCustomerTextBox.Name = "StreetAddressUpdateCustomerTextBox";
-            this.StreetAddressUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.StreetAddressUpdateCustomerTextBox.TabIndex = 20;
+            this.StreetAddressUpdatePatientTextBox.Location = new System.Drawing.Point(351, 194);
+            this.StreetAddressUpdatePatientTextBox.Name = "StreetAddressUpdatePatientTextBox";
+            this.StreetAddressUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.StreetAddressUpdatePatientTextBox.TabIndex = 20;
             // 
             // LastNameUpdateCustomerLabel
             // 
@@ -132,12 +132,12 @@
             this.LastNameUpdateCustomerLabel.TabIndex = 19;
             this.LastNameUpdateCustomerLabel.Text = "Last Name:";
             // 
-            // LastNameUpdateCustomerTextBox
+            // LastNameUpdatePatientTextBox
             // 
-            this.LastNameUpdateCustomerTextBox.Location = new System.Drawing.Point(350, 166);
-            this.LastNameUpdateCustomerTextBox.Name = "LastNameUpdateCustomerTextBox";
-            this.LastNameUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.LastNameUpdateCustomerTextBox.TabIndex = 18;
+            this.LastNameUpdatePatientTextBox.Location = new System.Drawing.Point(350, 166);
+            this.LastNameUpdatePatientTextBox.Name = "LastNameUpdatePatientTextBox";
+            this.LastNameUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.LastNameUpdatePatientTextBox.TabIndex = 18;
             // 
             // FirstNameUpdateCustomerLabel
             // 
@@ -148,12 +148,12 @@
             this.FirstNameUpdateCustomerLabel.TabIndex = 17;
             this.FirstNameUpdateCustomerLabel.Text = "First Name:";
             // 
-            // FirstNameUpdateCustomerTextBox
+            // FirstNameUpdatePatientTextBox
             // 
-            this.FirstNameUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 139);
-            this.FirstNameUpdateCustomerTextBox.Name = "FirstNameUpdateCustomerTextBox";
-            this.FirstNameUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.FirstNameUpdateCustomerTextBox.TabIndex = 16;
+            this.FirstNameUpdatePatientTextBox.Location = new System.Drawing.Point(351, 139);
+            this.FirstNameUpdatePatientTextBox.Name = "FirstNameUpdatePatientTextBox";
+            this.FirstNameUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.FirstNameUpdatePatientTextBox.TabIndex = 16;
             // 
             // GoBackUpdateCustomerButton
             // 
@@ -184,19 +184,19 @@
             this.StreetAddress2UpdateLabel.TabIndex = 34;
             this.StreetAddress2UpdateLabel.Text = "Street Address (2):";
             // 
-            // StreetAddress2UpdateCustomerTextBox
+            // StreetAddress2UpdatePatientTextBox
             // 
-            this.StreetAddress2UpdateCustomerTextBox.Location = new System.Drawing.Point(351, 221);
-            this.StreetAddress2UpdateCustomerTextBox.Name = "StreetAddress2UpdateCustomerTextBox";
-            this.StreetAddress2UpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.StreetAddress2UpdateCustomerTextBox.TabIndex = 33;
+            this.StreetAddress2UpdatePatientTextBox.Location = new System.Drawing.Point(351, 221);
+            this.StreetAddress2UpdatePatientTextBox.Name = "StreetAddress2UpdatePatientTextBox";
+            this.StreetAddress2UpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.StreetAddress2UpdatePatientTextBox.TabIndex = 33;
             // 
-            // CountryUpdateCustomerTextBox
+            // CountryUpdatePatientTextBox
             // 
-            this.CountryUpdateCustomerTextBox.Location = new System.Drawing.Point(351, 305);
-            this.CountryUpdateCustomerTextBox.Name = "CountryUpdateCustomerTextBox";
-            this.CountryUpdateCustomerTextBox.Size = new System.Drawing.Size(132, 20);
-            this.CountryUpdateCustomerTextBox.TabIndex = 36;
+            this.CountryUpdatePatientTextBox.Location = new System.Drawing.Point(351, 305);
+            this.CountryUpdatePatientTextBox.Name = "CountryUpdatePatientTextBox";
+            this.CountryUpdatePatientTextBox.Size = new System.Drawing.Size(132, 20);
+            this.CountryUpdatePatientTextBox.TabIndex = 36;
             // 
             // CountryUpdateCustomerRecordLabel
             // 
@@ -216,41 +216,41 @@
             this.IDCustomer.TabIndex = 38;
             this.IDCustomer.Text = "ID:";
             // 
-            // customerIdTextBox
+            // patientIdTextBox
             // 
-            this.customerIdTextBox.Enabled = false;
-            this.customerIdTextBox.Location = new System.Drawing.Point(350, 113);
-            this.customerIdTextBox.Name = "customerIdTextBox";
-            this.customerIdTextBox.Size = new System.Drawing.Size(132, 20);
-            this.customerIdTextBox.TabIndex = 37;
+            this.patientIdTextBox.Enabled = false;
+            this.patientIdTextBox.Location = new System.Drawing.Point(350, 113);
+            this.patientIdTextBox.Name = "patientIdTextBox";
+            this.patientIdTextBox.Size = new System.Drawing.Size(132, 20);
+            this.patientIdTextBox.TabIndex = 37;
             // 
-            // UpdateCustomerRecordView
+            // UpdatePatientRecordView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.IDCustomer);
-            this.Controls.Add(this.customerIdTextBox);
-            this.Controls.Add(this.CountryUpdateCustomerTextBox);
+            this.Controls.Add(this.patientIdTextBox);
+            this.Controls.Add(this.CountryUpdatePatientTextBox);
             this.Controls.Add(this.CountryUpdateCustomerRecordLabel);
             this.Controls.Add(this.StreetAddress2UpdateLabel);
-            this.Controls.Add(this.StreetAddress2UpdateCustomerTextBox);
+            this.Controls.Add(this.StreetAddress2UpdatePatientTextBox);
             this.Controls.Add(this.GoBackUpdateCustomerButton);
             this.Controls.Add(this.ConfirmUpdateCustomerButton);
             this.Controls.Add(this.PhoneNumberUpdateCustomerLabel);
-            this.Controls.Add(this.PhoneNumberUpdateCustomerTextBox);
+            this.Controls.Add(this.PhoneNumberUpdatePatientTextBox);
             this.Controls.Add(this.ZipCodeUpdateCustomerLabel);
-            this.Controls.Add(this.ZipcodeUpdateCustomerTextBox);
+            this.Controls.Add(this.ZipcodeUpdatePatientTextBox);
             this.Controls.Add(this.StateUpdateCustomerLabel);
             this.Controls.Add(this.CityUpdateCustomerLabel);
-            this.Controls.Add(this.CityUpdateCustomerTextBox);
+            this.Controls.Add(this.CityUpdatePatientTextBox);
             this.Controls.Add(this.StreetAddressUpdateCustomerLabel);
-            this.Controls.Add(this.StreetAddressUpdateCustomerTextBox);
+            this.Controls.Add(this.StreetAddressUpdatePatientTextBox);
             this.Controls.Add(this.LastNameUpdateCustomerLabel);
-            this.Controls.Add(this.LastNameUpdateCustomerTextBox);
+            this.Controls.Add(this.LastNameUpdatePatientTextBox);
             this.Controls.Add(this.FirstNameUpdateCustomerLabel);
-            this.Controls.Add(this.FirstNameUpdateCustomerTextBox);
-            this.Name = "UpdateCustomerRecordView";
+            this.Controls.Add(this.FirstNameUpdatePatientTextBox);
+            this.Name = "UpdatePatientRecordView";
             this.Text = "Update Customer Record";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,25 +260,25 @@
         #endregion
 
         private System.Windows.Forms.Label PhoneNumberUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox PhoneNumberUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox PhoneNumberUpdatePatientTextBox;
         private System.Windows.Forms.Label ZipCodeUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox ZipcodeUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox ZipcodeUpdatePatientTextBox;
         private System.Windows.Forms.Label StateUpdateCustomerLabel;
         private System.Windows.Forms.Label CityUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox CityUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox CityUpdatePatientTextBox;
         private System.Windows.Forms.Label StreetAddressUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox StreetAddressUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox StreetAddressUpdatePatientTextBox;
         private System.Windows.Forms.Label LastNameUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox LastNameUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox LastNameUpdatePatientTextBox;
         private System.Windows.Forms.Label FirstNameUpdateCustomerLabel;
-        private System.Windows.Forms.TextBox FirstNameUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox FirstNameUpdatePatientTextBox;
         private System.Windows.Forms.Button GoBackUpdateCustomerButton;
         private System.Windows.Forms.Button ConfirmUpdateCustomerButton;
         private System.Windows.Forms.Label StreetAddress2UpdateLabel;
-        private System.Windows.Forms.TextBox StreetAddress2UpdateCustomerTextBox;
-        private System.Windows.Forms.TextBox CountryUpdateCustomerTextBox;
+        private System.Windows.Forms.TextBox StreetAddress2UpdatePatientTextBox;
+        private System.Windows.Forms.TextBox CountryUpdatePatientTextBox;
         private System.Windows.Forms.Label CountryUpdateCustomerRecordLabel;
         private System.Windows.Forms.Label IDCustomer;
-        private System.Windows.Forms.TextBox customerIdTextBox;
+        private System.Windows.Forms.TextBox patientIdTextBox;
     }
 }
