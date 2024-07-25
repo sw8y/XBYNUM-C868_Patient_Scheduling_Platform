@@ -34,6 +34,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.CustomerRecordsAddButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -114,11 +116,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox
+            // 
+            this.textBox.Location = new System.Drawing.Point(567, 31);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(143, 20);
+            this.textBox.TabIndex = 4;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(716, 32);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(72, 19);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
             // CustomerRecordsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.customerDataGridView);
             this.Name = "CustomerRecordsView";
@@ -126,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -137,5 +159,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button CustomerRecordsAddButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Button searchButton;
     }
 }

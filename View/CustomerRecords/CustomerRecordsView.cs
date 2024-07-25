@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -163,6 +165,55 @@ namespace XBYNUM_C969_Application_Development
             this.Hide();
             var Menu = new Menu();
             Menu.Show();
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string searchCriteria = textBox.Text;
+            customerDataGridView.ClearSelection();
+            Console.WriteLine(searchCriteria.All(char.IsDigit));
+                
+           if (searchCriteria.All(char.IsDigit) == true)
+            {
+                try
+                {
+                    //Debug.WriteLine($"{searchCriteria}");
+                    foreach (DataGridViewRow row in customerDataGridView.Rows)
+                    {
+                        if (row.Cells[0].Value != null)
+                        {
+                            if (row.Cells[0].Value.ToString().Equals(searchCriteria))
+                            {
+                                row.Selected = true;
+                                break;
+                            }
+                        }
+                        else 
+                        { MessageBox.Show("Customer could not be found!"); }
+                    }
+
+                }
+                catch (System.NullReferenceException) { MessageBox.Show("Part could not be found!"); }
+
+            }
+            else
+            {
+                foreach (DataGridViewRow row in customerDataGridView.Rows)
+                {
+                    if (row.Cells[1].Value != null)
+                    {
+                        // 1 is the column index
+                        if (row.Cells[1].Value.ToString().Equals(searchCriteria))
+                        {
+                            row.Selected = true;
+                            break;
+                        }
+                    }
+                    else
+                    { MessageBox.Show("Customer could not be found!"); }
+
+                }
+            }
         }
     }
 }

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.X509;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -181,5 +183,50 @@ namespace XBYNUM_C969_Application_Development
             }
             
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[appointmentsDataGridView.DataSource];
+            currencyManager1.SuspendBinding();
+            //yourDataGridView.Rows[Target Index].Visible = false;
+            
+            string searchCriteria = textBox.Text;
+            appointmentsDataGridView.ClearSelection();
+            Console.WriteLine(searchCriteria.All(char.IsDigit));
+ 
+            try
+                {
+                    //Debug.WriteLine($"{searchCriteria}");
+                    foreach (DataGridViewRow row in appointmentsDataGridView.Rows)
+                    {
+                    if (row.Cells[6].Value != null)
+                    {
+                        if (row.Cells[6].Value.ToString().Equals(searchCriteria))
+                        {
+                            //row.Selected = true;
+
+                            //break;
+                        }
+                        else
+                        {
+                            DataGridViewBand rowToHide = row;
+                            rowToHide.Visible = false;
+                        }
+                    }
+                    else
+                    { } //MessageBox.Show("Appointment type could not be found!"); }
+                    }
+
+                }
+                catch (System.NullReferenceException) { MessageBox.Show("Part could not be found!"); }
+                currencyManager1.ResumeBinding();
+            }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[appointmentsDataGridView.DataSource];
+            currencyManager1.Refresh();
+            textBox.Clear();
+        }
     }
-}
+    }
