@@ -20,8 +20,8 @@ namespace XBYNUM_C969_Application_Development
             //Application.Run(new CalendarView());
             //Application.Run(new ReportView());
             //Application.Run(new Menu());
-            Application.Run(new AppointmentsView());
-            //Application.Run(new CustomerRecordsView());
+            //Application.Run(new AppointmentsView());
+            Application.Run(new PatientRecordsView());
             //Application.Run(new Form1());
             //Application.Run(new AddCustomerRecordView());
         }

@@ -272,13 +272,10 @@ C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBY
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.AddAppointmentView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.CalendarView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.UserControlCal.resources
-C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.AddCustomerRecordView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.AppointmentsView.resources
-C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.CustomerRecordsView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.LoginPageView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.Properties.Resources.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.UpdateAppointmentView.resources
-C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.UpdateCustomerRecordView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.Menu.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.ReportView.resources
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM-C969-Application_Development.csproj.GenerateResource.cache
@@ -286,3 +283,6 @@ C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBY
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM-C.3A66C26E.Up2Date
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM-C969-Application_Development.exe
 C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM-C969-Application_Development.pdb
+C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.AddPatientRecordView.resources
+C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.PatientRecordsView.resources
+C:\Users\Sw8y\Source\Repos\XBYNUM-C868_Patient_Scheduling_Platform\obj\Debug\XBYNUM_C969_Application_Development.UpdatePatientRecordView.resources

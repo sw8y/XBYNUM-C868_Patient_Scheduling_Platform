@@ -1,6 +1,6 @@
 ﻿namespace XBYNUM_C969_Application_Development
 {
-    partial class UpdateCustomerRecordView
+    partial class UpdatePatientRecordView
     {
         /// <summary>
         /// Required designer variable.
@@ -163,7 +163,7 @@
             this.GoBackUpdateCustomerButton.TabIndex = 32;
             this.GoBackUpdateCustomerButton.Text = "Go Back";
             this.GoBackUpdateCustomerButton.UseVisualStyleBackColor = true;
-            this.GoBackUpdateCustomerButton.Click += new System.EventHandler(this.GoBackUpdateCustomerButton_Click);
+            this.GoBackUpdateCustomerButton.Click += new System.EventHandler(this.GoBackUpdatePatientButton_Click);
             // 
             // ConfirmUpdateCustomerButton
             // 
@@ -173,7 +173,7 @@
             this.ConfirmUpdateCustomerButton.TabIndex = 31;
             this.ConfirmUpdateCustomerButton.Text = "Add";
             this.ConfirmUpdateCustomerButton.UseVisualStyleBackColor = true;
-            this.ConfirmUpdateCustomerButton.Click += new System.EventHandler(this.ConfirmUpdateCustomerButton_Click);
+            this.ConfirmUpdateCustomerButton.Click += new System.EventHandler(this.ConfirmUpdatePatientButton_Click);
             // 
             // StreetAddress2UpdateLabel
             // 

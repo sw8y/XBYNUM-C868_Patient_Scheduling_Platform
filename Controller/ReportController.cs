@@ -54,8 +54,8 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Open();
             try
             {
-                string query = ("SELECT customer.customerName, user.userName, title, start, end FROM appointment " +
-                "LEFT JOIN customer ON appointment.customerId = customer.customerId " +
+                string query = ("SELECT patient.patientName, user.userName, title, start, end FROM appointment " +
+                "LEFT JOIN patient ON appointment.patientId = patient.patientId " +
                 "LEFT JOIN user ON appointment.userId = user.userId " +
                 "ORDER BY user.UserName, start ASC;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -77,26 +77,26 @@ namespace XBYNUM_C969_Application_Development.Controller
         // Third button - Get count of customers per city
         public getReportData customersPerCity = () =>
         {
-            IList<dynamic> customerCountPerCity = new List<dynamic>();
+            IList<dynamic> patientCountPerCity = new List<dynamic>();
             connection.Open();
             try
             {
-                string query = (" select city.city, COUNT(customerName) FROM customer " +
-                "LEFT JOIN address ON customer.addressId = address.addressId " +
+                string query = (" select city.city, COUNT(patientName) FROM patient " +
+                "LEFT JOIN address ON patient.addressId = address.addressId " +
                 "LEFT JOIN city ON address.cityId = city.cityId GROUP BY city;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    customerCountPerCity.Add(rdr.GetString(0) + ":" + rdr.GetString(1));
+                    patientCountPerCity.Add(rdr.GetString(0) + ":" + rdr.GetString(1));
                     //customerCountPerCity.Add(new KeyValuePair<dynamic, dynamic>(rdr.GetString(0), Int32.Parse(rdr.GetString(1))));
                 }
                 rdr.Close();
             }
             catch { }
             connection.Close();
-            return customerCountPerCity;
+            return patientCountPerCity;
         };
 
         // Appointment type per month report maker
@@ -161,7 +161,7 @@ namespace XBYNUM_C969_Application_Development.Controller
                     {
                         foreach (dynamic value in reportData)
                         {
-                            byte[] info = new UTF8Encoding(true).GetBytes($"Customer: {value.Split(';')[0]}, User: {value.Split(';')[1]}, Meeting Title: {value.Split(';')[2]}, Start Date & Time: {value.Split(';')[3]}, End Date & Time: {value.Split(';')[4]}\n");
+                            byte[] info = new UTF8Encoding(true).GetBytes($"Patient: {value.Split(';')[0]}, User: {value.Split(';')[1]}, Meeting Title: {value.Split(';')[2]}, Start Date & Time: {value.Split(';')[3]}, End Date & Time: {value.Split(';')[4]}\n");
                             // Add some information to the file.
                             fs.Write(info, 0, info.Length);
                             //Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
@@ -207,7 +207,7 @@ namespace XBYNUM_C969_Application_Development.Controller
                     {
                         foreach (dynamic value in reportData)
                         {
-                            byte[] info = new UTF8Encoding(true).GetBytes($"City: {value.Split(':')[0]}, Customer Count = {value.Split(':')[1]}\n");
+                            byte[] info = new UTF8Encoding(true).GetBytes($"City: {value.Split(':')[0]}, Patient Count = {value.Split(':')[1]}\n");
                             // Add some information to the file.
                             fs.Write(info, 0, info.Length);
                             //Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);

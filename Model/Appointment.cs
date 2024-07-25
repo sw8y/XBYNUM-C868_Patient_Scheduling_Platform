@@ -9,7 +9,7 @@ using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace XBYNUM_C969_Application_Development
 {
-    public class Appointment : Customer
+    public class Appointment : Patient
     {
         public int appointmentId { get; set; }
         public string title { get; set; }

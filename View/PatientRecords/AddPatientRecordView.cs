@@ -13,17 +13,17 @@ using XBYNUM_C969_Application_Development.Model;
 
 namespace XBYNUM_C969_Application_Development
 {
-    public partial class AddCustomerRecordView : Form
+    public partial class AddPatientRecordView : Form
     {
-        public AddCustomerRecordView()
+        public AddPatientRecordView()
         {
             InitializeComponent();
         }
 
-        private void ConfirmAddCustomerButton_Click(object sender, EventArgs e)
+        private void ConfirmAddPatientButton_Click(object sender, EventArgs e)
         {
-            CustomerController customerController = new CustomerController();
-            Customer customer = new Customer();
+            PatientController patientController = new PatientController();
+            Patient patient = new Patient();
 
             string sPattern = "^\\d{3}-\\d{3}-\\d{4}$";
             if (String.IsNullOrEmpty(FirstNameAddCustomerTextBox.Text) ||
@@ -41,22 +41,22 @@ namespace XBYNUM_C969_Application_Development
                 if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberAddCustomerTextBox.Text.Trim(), sPattern))
                 {
                     string name = FirstNameAddCustomerTextBox.Text.Trim() + " " + LastNameAddCustomerTextBox.Text.Trim();
-                    if (customerController.validateUniqueCustomer(name) != false) 
+                    if (patientController.validateUniquePatient(name) != false) 
                     {
-                        customer.active = 1;
-                        customer.customerName = FirstNameAddCustomerTextBox.Text.Trim() + " " + LastNameAddCustomerTextBox.Text.Trim();
-                        customer.address = StreetAddressAddCustomerTextBox.Text.Trim();
-                        customer.address2 = StreetAddress2AddCustomerTextBox.Text.Trim();
-                        customer.city = CityAddCustomerTextBox.Text.Trim();
-                        customer.postalCode = ZipcodeAddCustomerTextBox.Text.Trim();
-                        customer.country = CountryAddCustomerTextBox.Text.Trim();
-                        customer.phone = PhoneNumberAddCustomerTextBox.Text.Trim();
+                        patient.active = 1;
+                        patient.patientName = FirstNameAddCustomerTextBox.Text.Trim() + " " + LastNameAddCustomerTextBox.Text.Trim();
+                        patient.address = StreetAddressAddCustomerTextBox.Text.Trim();
+                        patient.address2 = StreetAddress2AddCustomerTextBox.Text.Trim();
+                        patient.city = CityAddCustomerTextBox.Text.Trim();
+                        patient.postalCode = ZipcodeAddCustomerTextBox.Text.Trim();
+                        patient.country = CountryAddCustomerTextBox.Text.Trim();
+                        patient.phone = PhoneNumberAddCustomerTextBox.Text.Trim();
 
-                        customerController.addNewCustomer(customer);
+                        patientController.addNewPatient(patient);
 
                         this.Hide();
-                        var CustomerRecords = new CustomerRecordsView();
-                        CustomerRecords.Show();
+                        var PatientRecords = new PatientRecordsView();
+                        PatientRecords.Show();
                     }
                     else 
                     {
@@ -72,10 +72,10 @@ namespace XBYNUM_C969_Application_Development
             }
         }
 
-        private void GoBackAddCustomerButton_Click(object sender, EventArgs e)
+        private void GoBackAddPatientButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var Menu = new CustomerRecordsView();
+            var Menu = new PatientRecordsView();
             Menu.Show();
         }
     }

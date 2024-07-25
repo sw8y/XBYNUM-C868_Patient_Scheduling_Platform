@@ -1,6 +1,6 @@
 ﻿namespace XBYNUM_C969_Application_Development
 {
-    partial class AddCustomerRecordView
+    partial class AddPatientRecordView
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             this.ConfirmAddCustomerButton.TabIndex = 0;
             this.ConfirmAddCustomerButton.Text = "Add";
             this.ConfirmAddCustomerButton.UseVisualStyleBackColor = true;
-            this.ConfirmAddCustomerButton.Click += new System.EventHandler(this.ConfirmAddCustomerButton_Click);
+            this.ConfirmAddCustomerButton.Click += new System.EventHandler(this.ConfirmAddPatientButton_Click);
             // 
             // GoBackAddCustomerButton
             // 
@@ -66,7 +66,7 @@
             this.GoBackAddCustomerButton.TabIndex = 1;
             this.GoBackAddCustomerButton.Text = "Go Back";
             this.GoBackAddCustomerButton.UseVisualStyleBackColor = true;
-            this.GoBackAddCustomerButton.Click += new System.EventHandler(this.GoBackAddCustomerButton_Click);
+            this.GoBackAddCustomerButton.Click += new System.EventHandler(this.GoBackAddPatientButton_Click);
             // 
             // FirstNameAddCustomerTextBox
             // 
@@ -196,7 +196,7 @@
             this.CountryAddCustomerTextBox.Size = new System.Drawing.Size(132, 20);
             this.CountryAddCustomerTextBox.TabIndex = 20;
             // 
-            // AddCustomerRecordView
+            // AddPatientRecordView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,8 +219,8 @@
             this.Controls.Add(this.FirstNameAddCustomerTextBox);
             this.Controls.Add(this.GoBackAddCustomerButton);
             this.Controls.Add(this.ConfirmAddCustomerButton);
-            this.Name = "AddCustomerRecordView";
-            this.Text = "Add Customer Record";
+            this.Name = "AddPatientRecordView";
+            this.Text = "Add Patient Record";
             this.ResumeLayout(false);
             this.PerformLayout();
 

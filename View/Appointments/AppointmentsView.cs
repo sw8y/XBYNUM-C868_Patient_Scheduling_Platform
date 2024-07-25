@@ -41,8 +41,8 @@ namespace XBYNUM_C969_Application_Development
 
             appointmentsDataColumn = new DataColumn();
             appointmentsDataColumn.DataType = Type.GetType("System.String");
-            appointmentsDataColumn.ColumnName = "Customer Name";
-            appointmentsDataColumn.Caption = "Customer Name";
+            appointmentsDataColumn.ColumnName = "Patient Name";
+            appointmentsDataColumn.Caption = "Patient Name";
             appointmentsDataColumn.ReadOnly = true;
             //appointmentsDataColumn.Unique = true;
             appointmentsTable.Columns.Add(appointmentsDataColumn);
@@ -141,7 +141,7 @@ namespace XBYNUM_C969_Application_Development
         private void AppointmentsDeleteButton_Click(object sender, EventArgs e)
         {
             string message = $"Are you sure you want to delete this appointment?" +
-                $"\n\nCustomer: {appointmentsDataGridView.CurrentRow.Cells["Customer Name"].Value}\n" +
+                $"\n\nCustomer: {appointmentsDataGridView.CurrentRow.Cells["Patient Name"].Value}\n" +
                 $"Begin: {appointmentsDataGridView.CurrentRow.Cells["Start"].Value}\n" +
                 $"End: {appointmentsDataGridView.CurrentRow.Cells["End"].Value}";
             string title = "Warning: Appointment Deletion";

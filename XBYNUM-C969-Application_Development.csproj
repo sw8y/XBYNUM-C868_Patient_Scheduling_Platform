@@ -145,14 +145,14 @@
     <Compile Include="Controller\CalendarController.cs" />
     <Compile Include="Controller\CityController.cs" />
     <Compile Include="Controller\CountryController.cs" />
-    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Controller\PatientController.cs" />
     <Compile Include="Controller\ReportController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\City.cs" />
     <Compile Include="Model\Country.cs" />
-    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\Patient.cs" />
     <Compile Include="Model\DataLog.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="View\Calendar\DisplayEvents.cs">
@@ -191,11 +191,11 @@
     <Compile Include="View\Appointments\AddAppointmentView.Designer.cs">
       <DependentUpon>AddAppointmentView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerRecords\AddCustomerRecordView.cs">
+    <Compile Include="View\PatientRecords\AddPatientRecordView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CustomerRecords\AddCustomerRecordView.Designer.cs">
-      <DependentUpon>AddCustomerRecordView.cs</DependentUpon>
+    <Compile Include="View\PatientRecords\AddPatientRecordView.Designer.cs">
+      <DependentUpon>AddPatientRecordView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Appointments\AppointmentsView.cs">
       <SubType>Form</SubType>
@@ -203,11 +203,11 @@
     <Compile Include="View\Appointments\AppointmentsView.Designer.cs">
       <DependentUpon>AppointmentsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerRecords\CustomerRecordsView.cs">
+    <Compile Include="View\PatientRecords\PatientRecordsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CustomerRecords\CustomerRecordsView.Designer.cs">
-      <DependentUpon>CustomerRecordsView.cs</DependentUpon>
+    <Compile Include="View\PatientRecords\PatientRecordsView.Designer.cs">
+      <DependentUpon>PatientRecordsView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login\LoginPageView.cs">
       <SubType>Form</SubType>
@@ -229,11 +229,11 @@
     <Compile Include="View\Appointments\UpdateAppointmentView.Designer.cs">
       <DependentUpon>UpdateAppointmentView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerRecords\UpdateCustomerRecordView.cs">
+    <Compile Include="View\PatientRecords\UpdatePatientRecordView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CustomerRecords\UpdateCustomerRecordView.Designer.cs">
-      <DependentUpon>UpdateCustomerRecordView.cs</DependentUpon>
+    <Compile Include="View\PatientRecords\UpdatePatientRecordView.Designer.cs">
+      <DependentUpon>UpdatePatientRecordView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\Calendar\DisplayEvents.resx">
       <DependentUpon>DisplayEvents.cs</DependentUpon>
@@ -250,14 +250,14 @@
     <EmbeddedResource Include="View\Calendar\UserControlCal.resx">
       <DependentUpon>UserControlCal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CustomerRecords\AddCustomerRecordView.resx">
-      <DependentUpon>AddCustomerRecordView.cs</DependentUpon>
+    <EmbeddedResource Include="View\PatientRecords\AddPatientRecordView.resx">
+      <DependentUpon>AddPatientRecordView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Appointments\AppointmentsView.resx">
       <DependentUpon>AppointmentsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CustomerRecords\CustomerRecordsView.resx">
-      <DependentUpon>CustomerRecordsView.cs</DependentUpon>
+    <EmbeddedResource Include="View\PatientRecords\PatientRecordsView.resx">
+      <DependentUpon>PatientRecordsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login\LoginPageView.resx">
       <DependentUpon>LoginPageView.cs</DependentUpon>
@@ -274,8 +274,8 @@
     <EmbeddedResource Include="View\Appointments\UpdateAppointmentView.resx">
       <DependentUpon>UpdateAppointmentView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CustomerRecords\UpdateCustomerRecordView.resx">
-      <DependentUpon>UpdateCustomerRecordView.cs</DependentUpon>
+    <EmbeddedResource Include="View\PatientRecords\UpdatePatientRecordView.resx">
+      <DependentUpon>UpdatePatientRecordView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Menu\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -46,8 +46,8 @@ namespace XBYNUM_C969_Application_Development
             bool DST = false;
 
             DateTime date = new DateTime(CalendarView.static_year, CalendarView.static_month, Int32.Parse(selectedDay));
-            string sql_get_events = "SELECT appointmentId, customer.customerName, title, description, location, contact, type, url, start, end FROM appointment " +
-                "LEFT JOIN customer ON customer.customerId = appointment.customerId " +
+            string sql_get_events = "SELECT appointmentId, patient.patientName, title, description, location, contact, type, url, start, end FROM appointment " +
+                "LEFT JOIN patient ON patient.patientId = appointment.patientId " +
                 "WHERE start LIKE @date";
             MySqlCommand cmd = new MySqlCommand(sql_get_events, connection);
             cmd.Parameters.AddWithValue("@date", date.ToString("yyyy-MM-dd") + "%");
@@ -57,7 +57,7 @@ namespace XBYNUM_C969_Application_Development
                Console.WriteLine(rdr.GetString(0));
                 DataRow row = table.NewRow();
                 row["Appointment ID"] = rdr.GetString(0);
-                row["Customer Name"] = rdr.GetString(1);
+                row["Patient Name"] = rdr.GetString(1);
                 row["Title"] = rdr.GetString(2);
                 row["Description"] = rdr.GetString(3);
                 row["Location"] = rdr.GetString(4);
