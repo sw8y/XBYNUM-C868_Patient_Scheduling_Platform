@@ -45,7 +45,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return addressId;
         }
-        public void addAddress(MySqlConnection connection, Customer customer)
+        public void addAddress(MySqlConnection connection, Patient customer)
         {
             try
             {

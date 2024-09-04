@@ -51,8 +51,8 @@ namespace XBYNUM_C969_Application_Development.View.Calendar
 
             appointmentsDataColumn = new DataColumn();
             appointmentsDataColumn.DataType = System.Type.GetType("System.String");
-            appointmentsDataColumn.ColumnName = "Customer Name";
-            appointmentsDataColumn.Caption = "Customer Name";
+            appointmentsDataColumn.ColumnName = "Patient Name";
+            appointmentsDataColumn.Caption = "Patient Name";
             appointmentsDataColumn.ReadOnly = true;
             //appointmentsDataColumn.Unique = true;
             appointmentsTable.Columns.Add(appointmentsDataColumn);

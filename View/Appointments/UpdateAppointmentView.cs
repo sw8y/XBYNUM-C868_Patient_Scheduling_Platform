@@ -23,7 +23,7 @@ namespace XBYNUM_C969_Application_Development
         {
             InitializeComponent();
             CreateAppointmentsTable();
-            var customers = AppointmentController.getCustomers();
+            var customers = AppointmentController.getPatients();
             foreach (string customer in customers) { InviteeComboBox.Items.Add(customer); };
             YourTimeZoneTexBox.Text = TimeZone.CurrentTimeZone.StandardName;
             loadAppointmentData(appointmentId);
@@ -92,8 +92,8 @@ namespace XBYNUM_C969_Application_Development
                         {
                             appointment.title = TitleUpdateAppointmentTextBox.Text;
                             appointment.description = DescriptionUpdateAppointmentTextBox.Text;
-                            appointment.customerName = InviteeComboBox.Text;
-                            appointment.customerId = AppointmentController.getCustomerId(appointment.customerName);
+                            appointment.patientName = InviteeComboBox.Text;
+                            appointment.patientId = AppointmentController.getCustomerId(appointment.patientName);
                             appointment.location = locationTextBox.Text;
                             appointment.contact = ContactTextBox.Text;
                             appointment.type = TypeTextBox.Text;
@@ -135,8 +135,8 @@ namespace XBYNUM_C969_Application_Development
 
             appointmentsDataColumn = new DataColumn();
             appointmentsDataColumn.DataType = Type.GetType("System.String");
-            appointmentsDataColumn.ColumnName = "Customer Name";
-            appointmentsDataColumn.Caption = "Customer Name";
+            appointmentsDataColumn.ColumnName = "Patient Name";
+            appointmentsDataColumn.Caption = "Patient Name";
             appointmentsDataColumn.ReadOnly = true;
             //appointmentsDataColumn.Unique = true;
             appointmentsTable.Columns.Add(appointmentsDataColumn);

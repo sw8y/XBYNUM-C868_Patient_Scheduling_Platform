@@ -75,9 +75,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(66, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 16);
+            this.label4.Size = new System.Drawing.Size(208, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Customers (add, update, and delete)";
+            this.label4.Text = "Patients (add, update, and delete)";
             // 
             // label5
             // 

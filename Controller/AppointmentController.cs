@@ -18,20 +18,20 @@ namespace XBYNUM_C969_Application_Development.Controller
     {
         public static MySqlConnection connection = UserController.StartConnection();
 
-        public static List<string> getCustomers()
+        public static List<string> getPatients()
         {
-            List<string> customers = new List<string>();
+            List<string> patients = new List<string>();
             connection.Open();
 
             try
             {
-                string query = ("SELECT customerName FROM customer;");
+                string query = ("SELECT patientName FROM patient;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    customers.Add(rdr.GetString(0));
+                    patients.Add(rdr.GetString(0));
                 }
                 rdr.Close();
             }
@@ -41,18 +41,18 @@ namespace XBYNUM_C969_Application_Development.Controller
                 Console.WriteLine(ex.ToString());
             }
             connection.Close();
-            return customers;
+            return patients;
         }
-        public static int getCustomerId(string customerName) 
+        public static int getCustomerId(string patientName) 
         {
             connection.Open();
             int customerId = 0;
 
             try
             {
-                string query = ("SELECT customerId FROM customer WHERE customerName=@customerName;");
+                string query = ("SELECT customerId FROM patient WHERE patientsName=@patientsName;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@customerName", customerName);
+                cmd.Parameters.AddWithValue("@patientName", patientName);
                 customerId = (int)cmd.ExecuteScalar();
             }
 
@@ -69,10 +69,10 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Open();
             try
             {
-                string add_appointments = ("INSERT INTO appointment(customerId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
+                string add_appointments = ("INSERT INTO appointment(patientId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
                 "VALUES (@customerId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
                 MySqlCommand cmd = new MySqlCommand(add_appointments, connection);
-                cmd.Parameters.AddWithValue("@customerId", appointment.customerId);
+                cmd.Parameters.AddWithValue("@patientId", appointment.patientId);
                 cmd.Parameters.AddWithValue("@userId", UserController.userId);
                 cmd.Parameters.AddWithValue("@title", appointment.title);
                 cmd.Parameters.AddWithValue("@description", appointment.description);
@@ -103,11 +103,11 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             try
             {
-                string update_appointments = ("INSERT INTO appointment(customerId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
+                string update_appointments = ("INSERT INTO appointment(patientId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
                 "VALUES (@customerId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
                 MySqlCommand cmd = new MySqlCommand(update_appointments, connection);
                 //cmd.Parameters.AddWithValue("@appointmentId", appointment.appointmentId);
-                cmd.Parameters.AddWithValue("@customerId", appointment.customerId);
+                cmd.Parameters.AddWithValue("@patientId", appointment.patientId);
                 cmd.Parameters.AddWithValue("@userId", UserController.userId);
                 cmd.Parameters.AddWithValue("@title", appointment.title);
                 cmd.Parameters.AddWithValue("@description", appointment.description);
@@ -235,14 +235,14 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Open();
             try
             {
-                string query = ("SELECT appointmentId, customer.customerName, title, description, location, contact, type, url, start, end FROM appointment LEFT JOIN customer ON customer.customerId = appointment.customerId;");
+                string query = ("SELECT appointmentId, patient.patientName, title, description, location, contact, type, url, start, end FROM appointment LEFT JOIN patient ON patient.patientId = appointment.patientId;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
                     DataRow row = table.NewRow();
                     row["Appointment ID"] = rdr.GetString(0);
-                    row["Customer Name"] = rdr.GetString(1);
+                    row["Patient Name"] = rdr.GetString(1);
                     row["Title"] = rdr.GetString(2);
                     row["Description"] = rdr.GetString(3);
                     row["Location"] = rdr.GetString(4);
@@ -269,13 +269,13 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Open();
             try
             {
-                string query = ("SELECT customer.customerName, title, start, end FROM appointment LEFT JOIN customer ON appointment.customerId = customer.customerId;");
+                string query = ("SELECT patient.patientName, title, start, end FROM appointment LEFT JOIN patient ON appointment.patientId = patient.patientId;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
                     DataRow row = table.NewRow();
-                    row["Customer Name"] = rdr.GetString(0);
+                    row["Patient Name"] = rdr.GetString(0);
                     row["Title"] = rdr.GetString(1);
                     row["Start"] = DateTime.Parse(rdr.GetString(2)).ToLocalTime().ToString();
                     row["End"] = DateTime.Parse(rdr.GetString(3)).ToLocalTime().ToString();
@@ -318,8 +318,8 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Open();
             try
             {
-                string query = ($"SELECT appointmentId, customer.customerName, title, description, location, contact, type, url, start, end FROM appointment " +
-                     $"LEFT JOIN customer ON appointment.customerId = customer.customerId " +
+                string query = ($"SELECT appointmentId, patient.patientName, title, description, location, contact, type, url, start, end FROM appointment " +
+                     $"LEFT JOIN patient ON appointment.patientId = patient.patientId " +
                      $"WHERE appointmentId=@appointmentId;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@appointmentId", appointmentId);

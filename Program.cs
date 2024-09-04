@@ -16,12 +16,12 @@ namespace XBYNUM_C969_Application_Development
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPageView());
+            //Application.Run(new LoginPageView());
             //Application.Run(new CalendarView());
             //Application.Run(new ReportView());
-            //Application.Run(new Menu());
-            //Application.Run(new AddAppointmentView());
-            //Application.Run(new CustomerRecordsView());
+            Application.Run(new Menu());
+            //Application.Run(new AppointmentsView());
+            //Application.Run(new PatientRecordsView());
             //Application.Run(new Form1());
             //Application.Run(new AddCustomerRecordView());
         }

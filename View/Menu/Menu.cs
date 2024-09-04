@@ -25,7 +25,7 @@ namespace XBYNUM_C969_Application_Development
         private void customerGoButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var Menu = new CustomerRecordsView();
+            var Menu = new PatientRecordsView();
             Menu.Show();
         }
 

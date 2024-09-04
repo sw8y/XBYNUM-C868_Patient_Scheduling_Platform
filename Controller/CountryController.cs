@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace XBYNUM_C969_Application_Development.Controller
 {
-    public class CountryController : Customer
+    public class CountryController : Patient
     {
         public int lookupCountryId(MySqlConnection connection, string country) 
         {
@@ -35,7 +35,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return countryId;
         }
-        public void addCountry(MySqlConnection connection, Customer customer)
+        public void addCountry(MySqlConnection connection, Patient customer)
         { 
             try 
             {

@@ -35,7 +35,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return cityId;
         }
-        public void addCity(MySqlConnection connection, Customer customer)
+        public void addCity(MySqlConnection connection, Patient customer)
         {
 
             try

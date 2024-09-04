@@ -116,7 +116,7 @@
             this.GoBackAddCustomerButton.TabIndex = 17;
             this.GoBackAddCustomerButton.Text = "Go Back";
             this.GoBackAddCustomerButton.UseVisualStyleBackColor = true;
-            this.GoBackAddCustomerButton.Click += new System.EventHandler(this.GoBackAddCustomerButton_Click);
+            this.GoBackAddCustomerButton.Click += new System.EventHandler(this.GoBackAddPatientButton_Click);
             // 
             // ConfirmAddAppointmentButton
             // 

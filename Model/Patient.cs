@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace XBYNUM_C969_Application_Development.Model
 {
-    public class Customer : Address
+    public class Patient : Address
     {
-        public int customerId { get; set; }
-        public string customerName { get; set; }
+        public int patientId { get; set; }
+        public string patientName { get; set; }
         public int active { get; set; }
     }
 }
