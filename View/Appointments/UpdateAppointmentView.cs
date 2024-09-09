@@ -93,7 +93,7 @@ namespace XBYNUM_C969_Application_Development
                             appointment.title = TitleUpdateAppointmentTextBox.Text;
                             appointment.description = DescriptionUpdateAppointmentTextBox.Text;
                             appointment.patientName = InviteeComboBox.Text;
-                            appointment.patientId = AppointmentController.getCustomerId(appointment.patientName);
+                            appointment.patientId = AppointmentController.getPatientId(appointment.patientName);
                             appointment.location = locationTextBox.Text;
                             appointment.contact = ContactTextBox.Text;
                             appointment.type = TypeTextBox.Text;
