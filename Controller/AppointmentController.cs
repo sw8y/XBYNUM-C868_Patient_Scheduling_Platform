@@ -50,7 +50,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             try
             {
-                string query = ("SELECT patientId FROM patient WHERE patientsName=@patientsName;");
+                string query = ("SELECT patientId FROM patient WHERE patientName=@patientName;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@patientName", patientName);
                 patientId = (int)cmd.ExecuteScalar();
