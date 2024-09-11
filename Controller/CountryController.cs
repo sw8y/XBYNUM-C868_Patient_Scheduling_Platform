@@ -35,7 +35,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return countryId;
         }
-        public void addCountry(MySqlConnection connection, Patient customer)
+        public void addCountry(MySqlConnection connection, Patient patient)
         { 
             try 
             {
@@ -43,7 +43,7 @@ namespace XBYNUM_C969_Application_Development.Controller
                     "SELECT @country, @createDate, @createdBy, @lastUpdate, @lastUpdateBy FROM DUAL WHERE NOT EXISTS " +
                     "(SELECT * FROM country WHERE country=@country);";
                 MySqlCommand cmd = new MySqlCommand(sql_country, connection);
-                cmd.Parameters.AddWithValue("@country", customer.country);
+                cmd.Parameters.AddWithValue("@country", patient.country);
                 cmd.Parameters.AddWithValue("@createDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@createdBy", User.username);
                 cmd.Parameters.AddWithValue("@lastUpdate", DateTime.Now);

@@ -43,17 +43,17 @@ namespace XBYNUM_C969_Application_Development.Controller
             connection.Close();
             return patients;
         }
-        public static int getCustomerId(string patientName) 
+        public static int getPatientId(string patientName) 
         {
             connection.Open();
-            int customerId = 0;
+            int patientId = 0;
 
             try
             {
-                string query = ("SELECT customerId FROM patient WHERE patientsName=@patientsName;");
+                string query = ("SELECT patientId FROM patient WHERE patientName=@patientName;");
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@patientName", patientName);
-                customerId = (int)cmd.ExecuteScalar();
+                patientId = (int)cmd.ExecuteScalar();
             }
 
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace XBYNUM_C969_Application_Development.Controller
                 Console.WriteLine(ex.ToString());
             }
             connection.Close();
-            return customerId; 
+            return patientId; 
         }
 
         public static void addAppointment(Appointment appointment) 
@@ -70,7 +70,7 @@ namespace XBYNUM_C969_Application_Development.Controller
             try
             {
                 string add_appointments = ("INSERT INTO appointment(patientId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
-                "VALUES (@customerId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
+                "VALUES (@patientId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
                 MySqlCommand cmd = new MySqlCommand(add_appointments, connection);
                 cmd.Parameters.AddWithValue("@patientId", appointment.patientId);
                 cmd.Parameters.AddWithValue("@userId", UserController.userId);
@@ -104,7 +104,7 @@ namespace XBYNUM_C969_Application_Development.Controller
             try
             {
                 string update_appointments = ("INSERT INTO appointment(patientId, userId, title, description, location, contact, type, url, start, end, createDate, createdBy, lastUpdate, lastUpdateBy) " +
-                "VALUES (@customerId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
+                "VALUES (@patientId, @userId, @title, @description, @location, @contact, @type, @url, @start, @end, @createDate, @createdBy, @lastUpdate, @lastUpdateBy);");
                 MySqlCommand cmd = new MySqlCommand(update_appointments, connection);
                 //cmd.Parameters.AddWithValue("@appointmentId", appointment.appointmentId);
                 cmd.Parameters.AddWithValue("@patientId", appointment.patientId);
