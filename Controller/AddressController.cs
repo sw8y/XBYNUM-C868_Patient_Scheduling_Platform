@@ -45,7 +45,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return addressId;
         }
-        public void addAddress(MySqlConnection connection, Patient customer)
+        public void addAddress(MySqlConnection connection, Patient patient)
         {
             try
             {
@@ -53,19 +53,19 @@ namespace XBYNUM_C969_Application_Development.Controller
                     "SELECT @address, @address2, @cityId, @postalCode, @phone, @createDate, @createdBy, @lastUpdate, @lastUpdateBy FROM DUAL WHERE NOT EXISTS " +
                     "(SELECT * FROM address WHERE address=@address AND address2=@address2); ";
                 MySqlCommand cmd = new MySqlCommand(sql_address, connection);
-                cmd.Parameters.AddWithValue("@address", customer.address);
-                if (string.IsNullOrEmpty(customer.address2))
+                cmd.Parameters.AddWithValue("@address", patient.address);
+                if (string.IsNullOrEmpty(patient.address2))
                 {
                     cmd.Parameters.AddWithValue("@address2", (object)(DBNull.Value));
                 }
                 else
                 {
-                    cmd.Parameters.AddWithValue("@address2", customer.address2);
+                    cmd.Parameters.AddWithValue("@address2", patient.address2);
                 }
                 //cmd.Parameters.AddWithValue("@address2", customer.address2);
-                cmd.Parameters.AddWithValue("@cityId", customer.cityId);
-                cmd.Parameters.AddWithValue("@postalCode", customer.postalCode);
-                cmd.Parameters.AddWithValue("@phone", customer.phone);
+                cmd.Parameters.AddWithValue("@cityId", patient.cityId);
+                cmd.Parameters.AddWithValue("@postalCode", patient.postalCode);
+                cmd.Parameters.AddWithValue("@phone", patient.phone);
                 cmd.Parameters.AddWithValue("@createDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@createdBy", User.username);
                 cmd.Parameters.AddWithValue("@lastUpdate", DateTime.Now);

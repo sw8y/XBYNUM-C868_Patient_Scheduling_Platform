@@ -35,7 +35,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
             return cityId;
         }
-        public void addCity(MySqlConnection connection, Patient customer)
+        public void addCity(MySqlConnection connection, Patient patient)
         {
 
             try
@@ -45,9 +45,9 @@ namespace XBYNUM_C969_Application_Development.Controller
                     "(SELECT * FROM city WHERE city=@city); ";
                 MySqlCommand cmd = new MySqlCommand(sql_city, connection);
                
-                cmd.Parameters.AddWithValue("@city", customer.city);
-                cmd.Parameters.AddWithValue("@countryId", customer.countryId);
-                cmd.Parameters.AddWithValue("@country", customer.country);
+                cmd.Parameters.AddWithValue("@city", patient.city);
+                cmd.Parameters.AddWithValue("@countryId", patient.countryId);
+                cmd.Parameters.AddWithValue("@country", patient.country);
                 cmd.Parameters.AddWithValue("@createDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@createdBy", User.username);
                 cmd.Parameters.AddWithValue("@lastUpdate", DateTime.Now);

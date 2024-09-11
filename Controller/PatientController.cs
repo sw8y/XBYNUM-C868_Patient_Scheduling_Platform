@@ -71,7 +71,7 @@ namespace XBYNUM_C969_Application_Development.Controller
 
         }
 
-        public void editExistingPatient(Patient patient)
+        public void editPatient(Patient patient)
         {
             User user = new User();
             //patient.setLogDataAdds(UserController.username);

@@ -66,7 +66,7 @@ namespace XBYNUM_C969_Application_Development
                 if (System.Text.RegularExpressions.Regex.IsMatch(PhoneNumberUpdatePatientTextBox.Text.Trim(), sPattern))
                 {
                     string name = FirstNameUpdatePatientTextBox.Text.Trim() + " " + LastNameUpdatePatientTextBox.Text.Trim();
-                    if (patientController.validateUniquePatient(name) != false) 
+                    if (true) 
                     {
                         patient.active = 1;
                         patient.patientId = Int32.Parse(patientIdTextBox.Text);
@@ -78,7 +78,7 @@ namespace XBYNUM_C969_Application_Development
                         patient.country = CountryUpdatePatientTextBox.Text.Trim();
                         patient.phone = PhoneNumberUpdatePatientTextBox.Text.Trim();
 
-                        patientController.editExistingPatient(patient);
+                        patientController.editPatient(patient);
 
                         this.Hide();
                         var PatientRecords = new PatientRecordsView();
