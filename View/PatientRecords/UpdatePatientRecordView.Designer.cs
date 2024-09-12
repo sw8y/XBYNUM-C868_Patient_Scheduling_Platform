@@ -251,7 +251,7 @@
             this.Controls.Add(this.FirstNameUpdateCustomerLabel);
             this.Controls.Add(this.FirstNameUpdatePatientTextBox);
             this.Name = "UpdatePatientRecordView";
-            this.Text = "Update Customer Record";
+            this.Text = "Update Patient Record";
             this.ResumeLayout(false);
             this.PerformLayout();
 
