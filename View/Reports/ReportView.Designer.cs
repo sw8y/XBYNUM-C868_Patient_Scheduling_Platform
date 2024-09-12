@@ -90,9 +90,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(597, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 13);
+            this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Customer Count By City";
+            this.label3.Text = "Patient Count By City";
             // 
             // menuButton
             // 
