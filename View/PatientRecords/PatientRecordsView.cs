@@ -123,7 +123,7 @@ namespace XBYNUM_C969_Application_Development
             // Make Part ID column the primary key column.
 
             DataColumn[] PrimaryKeyColumns = new DataColumn[1];
-            PrimaryKeyColumns[0] = patientsTable.Columns["Customer Name"];
+            PrimaryKeyColumns[0] = patientsTable.Columns["Patient Name"];
             patientsTable.PrimaryKey = PrimaryKeyColumns;
 
             // Add Products Table to DataSet
@@ -131,7 +131,6 @@ namespace XBYNUM_C969_Application_Development
 
             dSet = new DataSet();
             dSet.Tables.Add(patientsTable);
-
             // Add data to table using NewRow in Customer Controller method
 
             //CustomerController.AddCustomerDataToView(patientsTable);
