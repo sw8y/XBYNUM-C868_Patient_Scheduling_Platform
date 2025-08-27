@@ -22,7 +22,7 @@ namespace XBYNUM_C969_Application_Development.Controller
         public static MySqlConnection StartConnection() 
         {
             string connectionString = null;
-            connectionString = ($"server=localhost;database=client_schedule;uid=sqlUser;pwd=\"Passw0rd!\";");
+            connectionString = ($"server=INSERT_ADRRESS;database=INSERT_DATABASE_NAME;uid=INSERT_SQL_USER;pwd=\"INSERT_PASSWORD\";");
             MySqlConnection conn = new MySqlConnection(connectionString);
             return conn;
         }
